@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <title>registration form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Registration</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/day1-registration.html">Register</a></li>
+          <li><a href="/signin">Sign in</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="submit" method="post" novalidate>
+        <fieldset>
+          <legend>Personal info</legend>
+          <!--Full name-->
+          <div>
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Adam John"
+              required
+            />
+          </div>
+          <!--Email-->
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+          <!--phone input-->
+          <div>
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="9344553388"
+              pattern="[0-9]{10}"
+              required
+            />
+          </div>
+          <!--Date of birth-->
+          <div>
+            <label for="dob"><abbr title="Date of birth">DOB</abbr></label>
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              min="2008-01-01"
+              max="2026-04-24"
+              required
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Developer Profile</legend>
+          <!--tech intrest-->
+          <div>
+            <label for="tech-interest">Tech Interest</label>
+            <select name="tech-interest" id="tech-interest">
+              <option value="" selected disabled>Tech interest</option>
+              <option value="ai">AI</option>
+              <option value="frontend">Frontend</option>
+              <option value="backend">Backend</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </div>
+          <!--City-->
+          <div>
+            <label for="city">City</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              list="cities"
+              aria-label="search-city"
+            />
+            <datalist id="cities">
+              <option value="Rewa"></option>
+              <option value="Banglore"></option>
+              <option value="Delhi"></option>
+              <option value="Indore"></option>
+              <option value="Mumbai"></option>
+            </datalist>
+          </div>
+          <!--skill level-->
+          <div>
+            <label for="skill-level">Skill level</label>
+            <input
+              type="range"
+              name="skill-level"
+              id="skill-level"
+              min="1"
+              max="10"
+              required
+            />
+          </div>
+          <!--Short bio-->
+          <label for="bio">Write your short Bio</label>
+          <textarea
+            name="bio"
+            id="bio"
+            placeholder="Short bio here..."
+          ></textarea>
+          <!--terms-->
+          <div>
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">I agree to tems</label>
+          </div>
+        </fieldset>
+        <button type="submit" aria-label="submit-button">Submit</button>
+        <button type="reset" aria-label="reset-button">Reset</button>
+      </form>
+    </main>
+    <footer>
+      <p>
+        &copy; <time datetime="2026">2026</time> Student Developer registration
+        form
+      </p>
+    </footer>
+  </body>
+</html>
